@@ -2,21 +2,10 @@
 
 /* Controllers */
 
-var phonecatControllers = angular.module('phonecatControllers', []);
-
-phonecatControllers.controller('PhoneListCtrl', ['$scope', 'Phone',
-  function($scope, Phone) {
-    $scope.phones = Phone.query();
-    $scope.orderProp = 'age';
-  }]);
-
-phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', 'Phone',
-  function($scope, $routeParams, Phone) {
-    $scope.phone = Phone.get({phoneId: $routeParams.phoneId}, function(phone) {
-      $scope.mainImageUrl = phone.images[0];
+angular.module('numbersControllers', []).
+controller('NumbersCtrl', ['$scope',
+  function($scope) {
+    $scope.$watch('range', function(newVal, oldVal){
+        $scope.numbers = _.range(1, 1*newVal || 100);
     });
-
-    $scope.setImage = function(imageUrl) {
-      $scope.mainImageUrl = imageUrl;
-    }
   }]);

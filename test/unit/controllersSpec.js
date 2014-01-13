@@ -11,8 +11,8 @@ describe('PhoneCat controllers', function() {
     });
   });
 
-  beforeEach(module('phonecatApp'));
-  beforeEach(module('phonecatServices'));
+  beforeEach(module('numbersApp'));
+  beforeEach(module('numbersServices'));
 
   describe('PhoneListCtrl', function(){
     var scope, ctrl, $httpBackend;
