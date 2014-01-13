@@ -1,0 +1,11 @@
+.numbers .ng-scope {
+    float: left;
+    padding-left: 3px;
+    font: 'Arial 15px';
+    width: 21px;
+}
+
+.red {
+
+    color: red;
+}

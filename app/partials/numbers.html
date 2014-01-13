@@ -3,7 +3,7 @@
     <div class="span2">
       <!--Sidebar content-->
 
-      Search: <input ng-model="query">
+      Divisor: <input ng-model="divisor">
       Range: <input ng-model="range">
       Sort by:
       <select ng-model="orderProp">
@@ -12,16 +12,15 @@
       </select>
 
     </div>
-    <div class="span10">
-      <!--Body content-->
-
-      <ul class="numbers">
-          <div ng-repeat="number in numbers">
-              {{number}}
+    <div class="span5">
+        <!--Body content-->
+        <ul class="numbers">
+         <div ng-repeat="number in numbersWithInfo">
+             <span ng-class="{red: number.divisible}">
+                {{number.n}}
+            </span>
           </div>
-        </li>
       </ul>
-
     </div>
   </div>
 </div>
