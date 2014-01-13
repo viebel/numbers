@@ -3,8 +3,9 @@
     <div class="span2">
       <!--Sidebar content-->
 
-      Divisor: <input ng-model="divisor">
       Range: <input ng-model="range">
+      Divisor: <input ng-model="divisor" class="divisor">
+      Condition: <input ng-model="condition" class="condition">
       Sort by:
       <select ng-model="orderProp">
         <option value="name">Alphabetical</option>
@@ -16,7 +17,7 @@
         <!--Body content-->
         <ul class="numbers">
          <div ng-repeat="number in numbersWithInfo">
-             <span ng-class="{red: number.divisible}">
+             <span ng-class="{divisor: number.divisible, condition: number.condition}">
                 {{number.n}}
             </span>
           </div>

@@ -1,11 +1,12 @@
 .numbers .ng-scope {
     float: left;
-    padding-left: 3px;
     font: 'Arial 15px';
-    width: 21px;
+    width: 29px;
 }
 
-.red {
-
+.condition {
+    font-weight: bold;
+}
+.divisor {
     color: red;
 }
